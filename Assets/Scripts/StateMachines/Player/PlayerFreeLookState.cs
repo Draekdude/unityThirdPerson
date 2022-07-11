@@ -8,18 +8,21 @@ public class PLayerFreeLookState : PlayerBaseState
 {
     private const float AnimatorDampTime = 0.1f;
     private readonly int FreeLookSpeedHash = Animator.StringToHash("FreeLookSpeed");
+    private readonly int FreeLookBlendTreeHash = Animator.StringToHash("FreeLookBlendTree");
 
     public PLayerFreeLookState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
     public override void Enter()
     {
+        
         stateMachine.InputReader.TargetEvent += OnTarget;
+        stateMachine.Animator.Play(FreeLookBlendTreeHash);
     }
 
     public override void Tick(float deltaTime)
     {
         Vector3 movement = CalculateMovement();
-        stateMachine.CharacterController.Move(movement * deltaTime * stateMachine.FreeLookMovementSpeed);
+        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
         if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
             stateMachine.Animator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
@@ -56,6 +59,7 @@ public class PLayerFreeLookState : PlayerBaseState
 
     private void OnTarget()
     {
+        if(!stateMachine.Targeter.SelectTarget()){return;}
         stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
     }
 
