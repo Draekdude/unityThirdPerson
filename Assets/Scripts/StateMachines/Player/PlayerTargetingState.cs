@@ -20,9 +20,14 @@ public class PlayerTargetingState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
+        if (stateMachine.InputReader.IsAttacking)
+        {
+            stateMachine.SwitchState(new PlayerAttackingState(stateMachine));
+            return;
+        }
         if (stateMachine.Targeter.CurrentTarget == null)
         {
-            stateMachine.SwitchState(new PLayerFreeLookState(stateMachine));
+            stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
             return;
         }
         var movement = CalculateMovement();
@@ -40,7 +45,7 @@ public class PlayerTargetingState : PlayerBaseState
     private void OnCancel()
     {
         stateMachine.Targeter.Cancel();
-        stateMachine.SwitchState(new PLayerFreeLookState(stateMachine));
+        stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
 
     private Vector3 CalculateMovement()

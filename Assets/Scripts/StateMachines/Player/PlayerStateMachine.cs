@@ -17,7 +17,7 @@ public class PlayerStateMachine : StateMachine
     private void Start()
     {
         MainCameraTransform = Camera.main.transform;
-        SwitchState(new PLayerFreeLookState(this));
+        SwitchState(new PlayerFreeLookState(this));
     }
 
 }

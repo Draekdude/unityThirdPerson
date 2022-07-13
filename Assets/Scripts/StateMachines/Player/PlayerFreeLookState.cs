@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PLayerFreeLookState : PlayerBaseState
+public class PlayerFreeLookState : PlayerBaseState
 {
     private const float AnimatorDampTime = 0.1f;
     private readonly int FreeLookSpeedHash = Animator.StringToHash("FreeLookSpeed");
     private readonly int FreeLookBlendTreeHash = Animator.StringToHash("FreeLookBlendTree");
 
-    public PLayerFreeLookState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+    public PlayerFreeLookState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
     public override void Enter()
     {
@@ -21,6 +21,11 @@ public class PLayerFreeLookState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
+        if (stateMachine.InputReader.IsAttacking)
+        {
+            stateMachine.SwitchState(new PlayerAttackingState(stateMachine));
+            return;
+        }
         Vector3 movement = CalculateMovement();
         Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
         if (stateMachine.InputReader.MovementValue == Vector2.zero)

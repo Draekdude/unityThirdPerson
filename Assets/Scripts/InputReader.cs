@@ -10,6 +10,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action DodgeEvent;
     public event Action TargetEvent;
     public event Action CancelEvent;
+    public bool IsAttacking { get; private set; }
 
     private Controls controls;
 
@@ -40,6 +41,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public void OnMove(InputAction.CallbackContext context)
     {
         MovementValue = context.ReadValue<Vector2>();
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed) IsAttacking = true;
+        if (context.canceled) IsAttacking = false;
     }
 
     public void OnCamera(InputAction.CallbackContext context)
