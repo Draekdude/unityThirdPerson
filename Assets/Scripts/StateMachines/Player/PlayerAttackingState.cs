@@ -15,6 +15,7 @@ public class PlayerAttackingState : PlayerBaseState
 
     public override void Enter()
     {
+        stateMachine.WeaponDamage.SetAttack(attack.Damage);
         stateMachine.Animator.CrossFadeInFixedTime(attack.AnimationName, attack.TransitionDuration);
     }
 
@@ -26,6 +27,7 @@ public class PlayerAttackingState : PlayerBaseState
 
         if(normalizedTime >= previousFrameTime && normalizedTime < 1f)
         {
+            
             if (normalizedTime >= attack.ForceTime)
             {
                 TryApplyForce();

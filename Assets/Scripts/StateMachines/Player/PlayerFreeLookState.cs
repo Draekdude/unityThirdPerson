@@ -7,6 +7,7 @@ using System;
 public class PlayerFreeLookState : PlayerBaseState
 {
     private const float AnimatorDampTime = 0.1f;
+    private const float CrossFadeTime = 0.1f;
     private readonly int FreeLookSpeedHash = Animator.StringToHash("FreeLookSpeed");
     private readonly int FreeLookBlendTreeHash = Animator.StringToHash("FreeLookBlendTree");
 
@@ -16,7 +17,7 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         
         stateMachine.InputReader.TargetEvent += OnTarget;
-        stateMachine.Animator.Play(FreeLookBlendTreeHash);
+        stateMachine.Animator.CrossFadeInFixedTime(FreeLookBlendTreeHash, CrossFadeTime);
     }
 
     public override void Tick(float deltaTime)
