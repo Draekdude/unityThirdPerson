@@ -14,15 +14,13 @@ public class EnemyIdleState : EnemyBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(LocomotionHash, CrossFadeTime);
-        
     }
 
     public override void Tick(float deltaTime){
         Move(deltaTime);
         if(IsInChaseRange())
         {
-            Debug.Log("In Range - will chase");
-            //transition to chasing state
+            stateMachine.SwitchState(new EnemyChasingState(stateMachine));
             return;
         }
         stateMachine.Animator.SetFloat(SpeedHash, 0f, AnimatorDampTime, deltaTime);
