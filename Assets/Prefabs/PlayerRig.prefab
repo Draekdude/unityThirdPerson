@@ -184,7 +184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556977715669329672}
-  m_LocalRotation: {x: -0.0114995325, y: -0.000028889173, z: -0.00000033223395, w: 0.9999339}
+  m_LocalRotation: {x: -0.011499531, y: -0.000028888027, z: -0.00000033222068, w: 0.9999339}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -780,7 +780,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556977717439124766}
-  m_LocalRotation: {x: -0.062806025, y: -0.00002881479, z: -0.0000018133222, w: 0.9980258}
+  m_LocalRotation: {x: -0.06280601, y: -0.000028813838, z: -0.000001813262, w: 0.9980258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1172,6 +1172,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
         type: 3}
+      propertyPath: <Health>k__BackingField
+      value: 
+      objectReference: {fileID: 1697327588443310508}
+    - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
+        type: 3}
       propertyPath: <Targeter>k__BackingField
       value: 
       objectReference: {fileID: 3902280176657365539}
@@ -1424,6 +1429,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 3642262775982604458}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1697327588443310508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2667807462269126918, guid: 48cf66746ecab4559832438991002898,
+    type: 3}
+  m_PrefabInstance: {fileID: 3642262775982604458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2f9f200413f411d911b2d2405bc4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2323709492267736421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1347864687550668239, guid: 48cf66746ecab4559832438991002898,

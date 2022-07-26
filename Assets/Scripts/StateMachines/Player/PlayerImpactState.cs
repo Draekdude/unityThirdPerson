@@ -17,6 +17,7 @@ public class PlayerImpactState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
+        Move(deltaTime);
         _duration -= deltaTime;
         if (_duration <= 0f)
         {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }
+    [field: SerializeField] public Health Health { get; private set; }
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [field: SerializeField] public float PlayerChasingRange { get; private set; }
     [field: SerializeField] public float PlayerAttackRange { get; private set; }
@@ -23,6 +25,21 @@ public class EnemyStateMachine : StateMachine
         Agent.updatePosition = false;
         Agent.updateRotation = false;
         SwitchState(new EnemyIdleState(this));
+    }
+
+    private void OnEnable()
+    {
+        Health.OnTakeDamage += HandleTakeDamage;
+    }
+
+    private void OnDisable()
+    {
+        Health.OnTakeDamage -= HandleTakeDamage;
+    }
+
+    private void HandleTakeDamage()
+    {
+        SwitchState(new EnemyImpactState(this));
     }
 
     private void OnDrawGizmosSelected()

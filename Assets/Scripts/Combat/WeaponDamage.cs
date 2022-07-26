@@ -20,11 +20,11 @@ public class WeaponDamage : MonoBehaviour
         if (other == myCollider) { return; }
         if (_alreadyCollidedWith.Contains(other)) { return; }
         _alreadyCollidedWith.Add(other);
-        if (other.TryGetComponent<Health>(out Health health))
+        if (other.TryGetComponent(out Health health))
         {
             health.DealDamage(_damage);
         }
-        if (other.TryGetComponent<ForceReceiver>(out ForceReceiver forceReceiver))
+        if (other.TryGetComponent(out ForceReceiver forceReceiver))
         {
             var singleDirection = (other.transform.position - myCollider.transform.position).normalized;
             forceReceiver.AddForce(singleDirection * _knockBack);

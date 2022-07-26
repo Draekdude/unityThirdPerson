@@ -38,7 +38,7 @@ public abstract class PlayerBaseState : State
         }
         else
         {
-            stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
+            stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
         }
     }
 }
