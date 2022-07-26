@@ -28,4 +28,12 @@ public abstract class EnemyBaseState : State
         return distance <= stateMachine.PlayerChasingRange;
     }
 
+    protected void FacePlayer()
+    {
+        if (stateMachine.Player == null) { return; }
+        var lookPosition = stateMachine.Player.transform.position - stateMachine.transform.position;
+        lookPosition.y = 0;
+        stateMachine.transform.rotation = Quaternion.LookRotation(lookPosition);
+    }
+
 }

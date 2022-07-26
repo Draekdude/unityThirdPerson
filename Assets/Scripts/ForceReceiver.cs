@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class ForceReceiver : MonoBehaviour
@@ -14,7 +16,7 @@ public class ForceReceiver : MonoBehaviour
 
     private void Update()
     {
-        if(verticalVelocity < 0f && controller.isGrounded)
+        if (verticalVelocity < 0f && controller.isGrounded)
         {
             verticalVelocity = Physics.gravity.y * Time.deltaTime;
         }

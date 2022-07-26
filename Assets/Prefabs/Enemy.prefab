@@ -1655,6 +1655,7 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 9215594012162505470}
   <MovementSpeed>k__BackingField: 3
   <PlayerChasingRange>k__BackingField: 10
+  <PlayerAttackRange>k__BackingField: 1.5
 --- !u!114 &2777087367694256748
 MonoBehaviour:
   m_ObjectHideFlags: 0
