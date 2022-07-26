@@ -184,7 +184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556977715669329672}
-  m_LocalRotation: {x: -0.011499528, y: -0.00002888712, z: -0.00000033221016, w: 0.9999339}
+  m_LocalRotation: {x: -0.0114995325, y: -0.000028889173, z: -0.00000033223395, w: 0.9999339}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4274193, y: 1}
+    m_SensorSize: {x: 1.3870968, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4274193, y: 1}
+    m_SensorSize: {x: 1.3870968, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4274193, y: 1}
+    m_SensorSize: {x: 1.3870968, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -780,7 +780,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556977717439124766}
-  m_LocalRotation: {x: -0.06280602, y: -0.00002884903, z: -0.000001815477, w: 0.9980258}
+  m_LocalRotation: {x: -0.062806025, y: -0.00002881479, z: -0.0000018133222, w: 0.9980258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4274193, y: 1}
+    m_SensorSize: {x: 1.3870968, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -859,7 +859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794173067641811557}
   m_LocalRotation: {x: -2.524355e-29, y: -1.009742e-28, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000166893, y: 0.00000011920929, z: 5.220154}
+  m_LocalPosition: {x: 0.00001692772, y: -0.000000059604645, z: 5.2201533}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1104,7 +1104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7207813266736626234}
-  m_LocalRotation: {x: 0.12988248, y: -0.44247478, z: 0.06494151, w: 0.8849459}
+  m_LocalRotation: {x: 0.12988247, y: -0.4424748, z: 0.06494151, w: 0.88494587}
   m_LocalPosition: {x: -108.1, y: 0, z: -67.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1143,7 +1143,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4274193, y: 1}
+    m_SensorSize: {x: 1.3870968, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1227,13 +1227,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
         type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[0].<KnockBack>k__BackingField
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
+        type: 3}
       propertyPath: <Attacks>k__BackingField.Array.data[1].<ForceTime>k__BackingField
       value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
         type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[1].<KnockBack>k__BackingField
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
+        type: 3}
       propertyPath: <Attacks>k__BackingField.Array.data[2].<ForceTime>k__BackingField
       value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
+        type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[2].<KnockBack>k__BackingField
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2948059535348886083, guid: 48cf66746ecab4559832438991002898,
         type: 3}
