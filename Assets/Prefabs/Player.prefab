@@ -1479,6 +1479,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 4379010864165868577}
   <ForceReceiver>k__BackingField: {fileID: 7908078422800142885}
   <Attacks>k__BackingField: []
+  <WeaponDamage>k__BackingField: {fileID: 0}
 --- !u!95 &4379010864165868577
 Animator:
   serializedVersion: 4
@@ -1869,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b67881f2ca0743ef8ba93b9229075ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCollider: {fileID: 5901483790032459687}
+  myCollider: {fileID: 4044298201834186701}
 --- !u!54 &1910774641412463234
 Rigidbody:
   m_ObjectHideFlags: 0
