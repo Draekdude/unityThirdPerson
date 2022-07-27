@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
 
     public event Action OnTakeDamage;
 
+    public event Action OnDie;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -19,10 +21,14 @@ public class Health : MonoBehaviour
 
     public void DealDamage(int damage)
     {
-        if (_currentHealth <= 0) { return; }
+        if (_currentHealth <= 0) {return;}
         _currentHealth = Mathf.Max(_currentHealth - damage, 0);
         print(_currentHealth);
         OnTakeDamage?.Invoke();
+        if (_currentHealth <= 0)
+        {
+            OnDie?.Invoke();
+        }
     }
 
 }
