@@ -24,14 +24,14 @@ public abstract class EnemyBaseState : State
 
     protected bool IsInChaseRange()
     {
-        var distance = Vector3.Distance(stateMachine.transform.position, stateMachine.Player.transform.position);
+        if (stateMachine.PlayerHealth.IsDead) { return false; }
+        var distance = Vector3.Distance(stateMachine.transform.position, stateMachine.PlayerHealth.transform.position);
         return distance <= stateMachine.PlayerChasingRange;
     }
 
     protected void FacePlayer()
     {
-        if (stateMachine.Player == null) { return; }
-        var lookPosition = stateMachine.Player.transform.position - stateMachine.transform.position;
+        var lookPosition = stateMachine.PlayerHealth.transform.position - stateMachine.transform.position;
         lookPosition.y = 0;
         stateMachine.transform.rotation = Quaternion.LookRotation(lookPosition);
     }

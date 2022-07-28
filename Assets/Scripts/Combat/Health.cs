@@ -15,6 +15,8 @@ public class Health : MonoBehaviour
 
     public event Action OnDie;
 
+    public bool IsDead => _currentHealth == 0;
+
     // Start is called before the first frame update
     private void Start()
     {

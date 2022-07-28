@@ -42,7 +42,7 @@ public class EnemyChasingState : EnemyBaseState
 
     private void MoveToPlayer(float deltaTime)
     {
-        stateMachine.Agent.destination = stateMachine.Player.transform.position;
+        stateMachine.Agent.destination = stateMachine.PlayerHealth.transform.position;
         if (stateMachine.Agent.isOnNavMesh)
         {
             Move(stateMachine.Agent.desiredVelocity.normalized * stateMachine.MovementSpeed, deltaTime);
@@ -52,7 +52,8 @@ public class EnemyChasingState : EnemyBaseState
 
     protected bool IsInAttackRange()
     {
-        var distance = Vector3.Distance(stateMachine.transform.position, stateMachine.Player.transform.position);
+        if (stateMachine.PlayerHealth.IsDead) { return false; }
+        var distance = Vector3.Distance(stateMachine.transform.position, stateMachine.PlayerHealth.transform.position);
         return distance <= stateMachine.PlayerAttackRange;
     }
 }

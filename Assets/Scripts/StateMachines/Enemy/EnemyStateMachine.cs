@@ -19,11 +19,11 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public float PlayerAttackRange { get; private set; }
     [field: SerializeField] public int AttackDamage { get; private set; }
     [field: SerializeField] public float KnockBack { get; private set; }
-    public GameObject Player { get; private set; }
+    public Health PlayerHealth { get; private set; }
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         Agent.updatePosition = false;
         Agent.updateRotation = false;
         SwitchState(new EnemyIdleState(this));

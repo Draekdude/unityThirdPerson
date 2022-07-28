@@ -21,6 +21,7 @@ public class EnemyAttackState : EnemyBaseState
         {
             stateMachine.SwitchState(new EnemyIdleState(stateMachine));
         }
+        FacePlayer();
     }
 
     public override void Exit()

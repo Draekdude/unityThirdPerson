@@ -35,7 +35,7 @@ public class Targeter : MonoBehaviour
         foreach (Target target in targets)
         {
             Vector2 viewPos = mainCamera.WorldToViewportPoint(target.transform.position);
-            if (IsTargetNotVisible(viewPos)) { continue; }
+            if (IsTargetNotVisible(viewPos) || IsTargetNotVisible(target)) { continue; }
             Vector2 toCenter = viewPos - new Vector2(0.5f, 0.5f);
             if (toCenter.sqrMagnitude < closestTargetDistance)
             {
@@ -47,6 +47,12 @@ public class Targeter : MonoBehaviour
         CurrentTarget = closestTarget;
         cineTargetGroup.AddMember(CurrentTarget.transform, 1f, 2f);
         return true;
+    }
+
+    private static bool IsTargetNotVisible(Target target)
+    {
+        var value = target.GetComponentInChildren<Renderer>();
+        return (!value.isVisible);
     }
 
     private static bool IsTargetNotVisible(Vector2 viewPos)
