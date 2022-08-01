@@ -1791,8 +1791,11 @@ MonoBehaviour:
   <CharacterController>k__BackingField: {fileID: 5901483790032459687}
   <Targeter>k__BackingField: {fileID: 0}
   <FreeLookMovementSpeed>k__BackingField: 6
-  <TargetingMovementSpeed>k__BackingField: 0
+  <TargetingMovementSpeed>k__BackingField: 5
   <RotationDamping>k__BackingField: 10
+  <DodgeDuration>k__BackingField: 0.1
+  <DodgeLength>k__BackingField: 0.75
+  <DodgeCoolDown>k__BackingField: 1
   <Ragdoll>k__BackingField: {fileID: 1759910936772339399}
   <Animator>k__BackingField: {fileID: 4379010864165868577}
   <ForceReceiver>k__BackingField: {fileID: 7908078422800142885}
