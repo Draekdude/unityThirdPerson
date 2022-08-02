@@ -12,7 +12,6 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float RotationDamping { get; private set; }
     [field: SerializeField] public float DodgeDuration { get; private set; }
     [field: SerializeField] public float DodgeLength { get; private set; }
-    [field: SerializeField] public float DodgeCoolDown { get; internal set; }
     [field: SerializeField] public float JumpForce { get; internal set; }
     [field: SerializeField] public Ragdoll Ragdoll { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
@@ -51,11 +50,6 @@ public class PlayerStateMachine : StateMachine
     private void HandleDie()
     {
         SwitchState(new PlayerDeadState(this));
-    }
-
-    public void SetDodgeTime(float dodgeTime)
-    {
-        PreviousDodgeTime = dodgeTime;
     }
 
 }
