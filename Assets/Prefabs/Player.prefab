@@ -1796,6 +1796,7 @@ MonoBehaviour:
   <DodgeDuration>k__BackingField: 0.1
   <DodgeLength>k__BackingField: 0.75
   <DodgeCoolDown>k__BackingField: 1
+  <JumpForce>k__BackingField: 4
   <Ragdoll>k__BackingField: {fileID: 1759910936772339399}
   <Animator>k__BackingField: {fileID: 4379010864165868577}
   <ForceReceiver>k__BackingField: {fileID: 7908078422800142885}
