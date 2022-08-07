@@ -14,6 +14,7 @@ public class PlayerJumpingState : PlayerBaseState
 
     public override void Enter()
     {
+        stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
         stateMachine.Animator.CrossFadeInFixedTime(JumpHash, CrossFadeTime);
         stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
         momentum = stateMachine.CharacterController.velocity;
@@ -33,7 +34,7 @@ public class PlayerJumpingState : PlayerBaseState
 
     public override void Exit()
     {
-
+        stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;
     }
 
 }

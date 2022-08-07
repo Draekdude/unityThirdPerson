@@ -1103,7 +1103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: -0.048845194, y: -0.000028552318, z: -0.0000013963054, w: 0.99880636}
+  m_LocalRotation: {x: -0.048845194, y: -0.000028552318, z: -0.0000013963058, w: 0.99880636}
   m_LocalPosition: {x: 84.47, y: 1.8529999, z: 38.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5726,17 +5726,17 @@ PrefabInstance:
     - target: {fileID: 556977715581429663, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.7474785
+      value: 0.04825477
       objectReference: {fileID: 0}
     - target: {fileID: 556977715581429663, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -5.007949
+      value: -5.91313
       objectReference: {fileID: 0}
     - target: {fileID: 556977715669329673, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.3870968
+      value: 1.3887097
       objectReference: {fileID: 0}
     - target: {fileID: 556977715669329674, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
@@ -5776,7 +5776,7 @@ PrefabInstance:
     - target: {fileID: 556977715734998432, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.3870968
+      value: 1.3887097
       objectReference: {fileID: 0}
     - target: {fileID: 556977715734998433, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
@@ -5806,12 +5806,12 @@ PrefabInstance:
     - target: {fileID: 556977715734998433, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001508488
+      value: -0.000000014913894
       objectReference: {fileID: 0}
     - target: {fileID: 556977715734998433, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000019583695
+      value: -0.0000000019381332
       objectReference: {fileID: 0}
     - target: {fileID: 556977716308376092, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
@@ -5841,22 +5841,22 @@ PrefabInstance:
     - target: {fileID: 556977716394011623, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.7474785
+      value: 0.04825477
       objectReference: {fileID: 0}
     - target: {fileID: 556977716394011623, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -5.007949
+      value: -5.91313
       objectReference: {fileID: 0}
     - target: {fileID: 556977716471885677, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.7474785
+      value: 0.04825477
       objectReference: {fileID: 0}
     - target: {fileID: 556977716471885677, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -5.007949
+      value: -5.91313
       objectReference: {fileID: 0}
     - target: {fileID: 556977717439124760, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
@@ -5886,17 +5886,17 @@ PrefabInstance:
     - target: {fileID: 556977717439124760, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000066520447
+      value: -0.0000000063282646
       objectReference: {fileID: 0}
     - target: {fileID: 556977717439124760, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000001213266
+      value: -0.0000000011646081
       objectReference: {fileID: 0}
     - target: {fileID: 556977717439124767, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.3870968
+      value: 1.3887097
       objectReference: {fileID: 0}
     - target: {fileID: 2286738404860664679, guid: b2b64cb9d86804bfbb32d5f2b2bc845a,
         type: 3}
